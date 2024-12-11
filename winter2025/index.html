@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Computer Vision: Foundations and Applications</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    />
+
+    <!-- Google fonts -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto:400,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body onload="page_loaded()">
+    <div id="header" class="row">
+      <div class="col-md-2">
+        <div style="height: 100px; width: 71px; overflow: hidden">
+          <a href="http://svl.stanford.edu/">
+            <img
+              src="img/svl_logo.png"
+              style="height: 100%; width: auto; float: left; margin-left: 20px"
+            />
+          </a>
+        </div>
+      </div>
+      <div id="classname" class="col-md-10">
+        <a href="index.html">
+          <h1 style="color: #aa001c">CS131 Computer Vision: Foundations and Applications</h1>
+        </a>
+        <div style="text-align: right">
+          <h4>Winter 2025</h4>
+        </div>
+        <div style="text-align: right">
+          <h5>
+            Previous Years:
+            <a href="http://vision.stanford.edu/teaching/cs131_fall1314/">[Fall 2013]</a>
+            <a href="http://vision.stanford.edu/teaching/cs131_fall1415/">[Fall 2014]</a>
+            <a href="http://vision.stanford.edu/teaching/cs131_fall1516/">[Fall 2015]</a>
+            <a href="http://vision.stanford.edu/teaching/cs131_fall1617/">[Fall 2016]</a>
+            <a href="http://vision.stanford.edu/teaching/cs131_fall1718/">[Fall 2017]</a>
+            <a href="http://vision.stanford.edu/teaching/cs131_fall1819/">[Fall 2018]</a>
+            <a href="http://vision.stanford.edu/teaching/cs131_fall1920/">[Fall 2019]</a>
+            <a href="http://vision.stanford.edu/teaching/cs131_fall2021/"> [Fall 2020]</a>
+            <a href="http://vision.stanford.edu/teaching/cs131_fall2122/"> [Fall 2021]</a>
+            <a href="http://vision.stanford.edu/teaching/cs131_fall2223/"> [Fall 2022]</a>
+            <a href="http://vision.stanford.edu/teaching/cs131_winter2324/"> [Winter 2024]</a>
+          </h5>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+    </div>
+
+    <div style="display: flex">
+      <div
+        style="
+          flex-grow: 1;
+          height: 700px;
+          background-image: url(img/project_video_sample-2.gif);
+          background-size: cover;
+          background-position: center center;
+        "
+      ></div>
+      <div
+        style="
+          flex-grow: 1;
+          height: 700px;
+          overflow: hidden;
+          background-image: url(img/PLACEMETER.gif);
+          background-size: cover;
+          background-position: center center;
+        "
+      ></div>
+    </div>
+    <div
+      style="
+        margin-left: 20px;
+        padding: 5px;
+        position: absolute;
+        margin-top: -40px;
+        background-color: white;
+      "
+    >
+      [<a href="https://navoshta.com/detecting-road-features/">image</a>] [<a
+        href="https://www.wired.com/2013/07/cara-placemeter-google-glass/"
+        >credit</a
+      >]
+    </div>
+
+    <div class="sechighlight">
+      <div class="container sec">
+        <h2>Course Description</h2>
+
+        <div id="coursedesc">
+          Ever wonder how robots can navigate space and perform duties, how search engines can index
+          billions of images and videos, how algorithms can diagnose medical images for diseases,
+          how self-driving cars can see and drive safely or how instagram creates filters or
+          snapchat creates masks? In this class, we will explore all of these technologies and learn
+          to prototype them. Lying in the heart of these modern AI applications are computer vision
+          technologies that can perceive, understand and reconstruct the complex visual world.
+          Computer Vision is one of the fastest growing and most exciting AI disciplines in today’s
+          academia and industry. This 10-week course is designed to open the doors for students who
+          are interested in learning about the fundamental principles and important applications of
+          computer vision. We will expose students to a number of real-world applications that are
+          important to our daily lives. More importantly, we will guide students through a series of
+          well designed projects such that they will get to implement a few interesting and
+          cutting-edge computer vision algorithms.
+        </div>
+      </div>
+    </div>
+
+    <div class="container sec">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Instructors</h2>
+          <div class="instructor">
+            <a href="http://www.niebles.net/">
+              <div class="instructorphoto"><img src="img/jc.jpg" /></div>
+              <div>Juan Carlos Niebles</div>
+            </a>
+            <br />
+          </div>
+          <div class="instructor">
+            <a href="https://adriengaidon.com/">
+              <div class="instructorphoto"><img src="img/adrien.png" /></div>
+              <div>Adrien Gaidon</div>
+            </a>
+            <br />
+          </div>
+        </div>
+        <div class="col-md-8">
+          <h2>Teaching Assistants</h2>
+          <div class="instructor">
+            <a href="https://www.linkedin.com/ta_placeholder">
+              <div class="instructorphoto">
+                <img src="profile_pics/placeholder_ta.png" />
+              </div>
+              <div>TA 1</div>
+            </a>
+            <br />
+          </div>
+          <div class="instructor">
+            <a href="https://www.linkedin.com/ta_placeholder">
+              <div class="instructorphoto">
+                <img src="profile_pics/placeholder_ta.png" />
+              </div>
+              <div>TA 2</div>
+            </a>
+            <br />
+          </div>
+          <div class="instructor">
+            <a href="https://www.linkedin.com/ta_placeholder">
+              <div class="instructorphoto">
+                <img src="profile_pics/placeholder_ta.png" />
+              </div>
+              <div>TA 3</div>
+            </a>
+            <br />
+          </div>
+          <div class="instructor">
+            <a href="https://www.linkedin.com/ta_placeholder">
+              <div class="instructorphoto">
+                <img src="profile_pics/placeholder_ta.png" />
+              </div>
+              <div>TA 4</div>
+            </a>
+            <br />
+          </div>
+          <div class="instructor">
+            <a href="https://www.linkedin.com/ta_placeholder">
+              <div class="instructorphoto">
+                <img src="profile_pics/placeholder_ta.png" />
+              </div>
+              <div>TA 5</div>
+            </a>
+            <br />
+          </div>
+          <div class="instructor">
+            <a href="https://www.linkedin.com/ta_placeholder">
+              <div class="instructorphoto">
+                <img src="profile_pics/placeholder_ta.png" />
+              </div>
+              <div>TA 6</div>
+            </a>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sechighlight">
+      <div class="container sec">
+        <h2>General Information</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="classpanel">
+              <a href="http://campus-map.stanford.edu/?id=01-320">
+                <p><img src="img/noun_Location_1924134_aa001c.png" /></p>
+                <br />
+                <p><span class="spanh">Class Time and Location</span></p>
+              </a>
+              <strong>Lectures</strong>
+              <p>
+                Monday / Wednesday <br />
+                3:00 - 4:20PM <br />
+                @<a href="https://campus-map.stanford.edu/?id=01-320">Building 320, Rm 105</a>
+              </p>
+              <strong>Recitations*</strong>
+              <p>TBD</p>
+              <em>*See syllabus for dates</em>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="classpanel">
+              <a href="syllabus.html">
+                <p><img src="img/noun_Bulleted Text_309743_aa001c.png" /></p>
+                <br />
+                <p><span class="spanh">Syllabus</span></p>
+              </a>
+              <p>Link to details on when assignments are due and what will be taught every day.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="classpanel">
+              <a href="https://szeliski.org/Book/">
+                <p>
+                  <img src="img/noun_Writing Textbook_1183229_aa001c.png" />
+                </p>
+                <br />
+                <p><span class="spanh">Textbook</span></p>
+              </a>
+              <p>
+                Recommended but not required:
+                <b>Computer Vision: Algorithms and Applications, 2nd ed.<br />Richard Szeliski</b
+                ><br />
+                <a href="https://szeliski.org/Book/"> Free PDF Download</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="classpanel">
+              <a href="assignments.html">
+                <p><img src="img/noun_coding_1316502_aa001c.png" /></p>
+                <br />
+                <p><span class="spanh">Assignments</span></p>
+              </a>
+              <p>Details on how to work on and submit each assignment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container sec">
+      <h2>Office Hours</h2>
+      <div class="row">
+        <div class="col-md-2">
+          <p><b>Juan Carlos Niebles</b></p>
+          <p>In person after class</p>
+          <p>TBD<br />10:00AM<br />@Google Meet</p>
+          <p>
+            <a
+              href="https://calendar.google.com/calendar/selfsched?sstoken=UUNqblR2Nk1nZ21ffGRlZmF1bHR8Y2UwYzQwZTAwMTNiMTYyYmIwMzJmMzM4ZTQ4NjhjNTY"
+            >
+              Book in advance</a
+            >
+          </p>
+        </div>
+        <div class="col-md-2">
+          <p><strong>Adrien Gaidon</strong></p>
+          <p>In person after class +</p>
+          <p>
+            <a href="https://calendar.app.google/57qGp3Wy9kYCw9CPA">Book in advance</a>
+          </p>
+        </div>
+        <div class="col-md-2">
+          <b>TA1</b><br />
+          <p>
+            Monday<br />
+            10:00AM - 12:00PM
+            <br />
+            Monday<br />
+            12:00PM - 2:00PM
+            <em>
+              <a href="https://queuestatus.com/queues/2573">@QueueStatus</a>
+            </em>
+          </p>
+        </div>
+        <div class="col-md-2">
+          <b>TA2</b><br />
+          <p>
+            Tuesday<br />
+            5:00PM - 7:00PM
+            <br />
+            Thursday<br />
+            5:00PM - 7:00PM
+            <em>
+              <a href="https://queuestatus.com/queues/2576">@QueueStatus</a>
+            </em>
+          </p>
+        </div>
+        <div class="col-md-2">
+          <b>TA3</b><br />
+          <p>
+            Wednesday<br />
+            12:00PM - 2:00PM Friday<br />
+            12:00PM - 2:00PM
+            <em>
+              <a href="https://queuestatus.com/queues/2572">@QueueStatus</a>
+            </em>
+          </p>
+        </div>
+        <div class="col-md-2">
+          <b>TA4</b><br />
+          <p>
+            Wednesday<br />
+            2:00PM - 4:00PM Friday<br />
+            2:00PM - 4:00PM
+            <em>
+              <a href="https://queuestatus.com/queues/2574">@QueueStatus</a>
+            </em>
+          </p>
+        </div>
+        <div class="col-md-2">
+          <b>TA5</b><br />
+          <p>
+            Wednesday<br />
+            6:00PM - 8:00PM
+            <em>
+              <a href="https://queuestatus.com/queues/2570">@QueueStatus</a>
+            </em>
+          </p>
+        </div>
+        <div class="col-md-2">
+          <b>TA6</b><br />
+          <p>
+            Tuesday (virtual)<br />
+            10:00PM - 12:00PM
+            <em>
+              <a href="https://queuestatus.com/queues/2104/">@QueueStatus</a>
+            </em>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sechighlight">
+      <div class="container sec">
+        <h2>Websites you should sign up for.</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="classpanel">
+              <a href="https://edstem.org/us/courses/52312/discussion/">
+                <p><img src="img/noun_discussion_1430519_aa001c.png" /></p>
+                <br />
+                <p><span class="spanh">Course Discussions</span></p>
+              </a>
+              <p>Please use Ed to ask questions you have throughout the course.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="classpanel">
+              <a href="https://github.com/StanfordVL/CS131_notes">
+                <p><img src="img/noun_notes_1075872_aa001c.png" /></p>
+                <br />
+                <p><span class="spanh">Class notes</span></p>
+              </a>
+              <p>
+                Here is the
+                <a href="https://github.com/StanfordVL/CS131_notes"
+                  >link to the repository of past notes.</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="classpanel">
+              <a href="https://www.gradescope.com/courses/450204">
+                <p><img src="img/noun_Grading papers_1670142_aa001c.png" /></p>
+                <br />
+                <p><span class="spanh">Gradescope</span></p>
+              </a>
+              <p>
+                Submit your assignment notebooks and PDFs to Gradescope. The email associated with
+                your Canvas account will be automatically added.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container sec">
+      <h2>Grading Policy</h2>
+      <b>Summary</b>
+      <ul>
+        <!-- <li>Assignment 0: 8%</li> -->
+        <li>Homework 0 (basics): 8%</li>
+        <li>Homework 1-6: 12% each</li>
+        <li>Demo Day: 20%</li>
+      </ul>
+      Deliverables will be <b>due on Tuesdays at 11:59pm (PT)</b>
+      <br />
+      <br />
+      <b>Late policy</b>
+      <p>
+        You will have a total of 7 late days that you can use in whichever assignments you prefer.
+        There is a limit of 3 late days used per assignment, which means that the hard deadline for
+        each assignment is on Friday at 11:59pm. Homeworks will still be accepted after your 7 late
+        days have been used, but a 25% penalty will be applied for each additional late day.
+      </p>
+      <!-- <p> -->
+      <!--   Once you have used all your late days (or 3 late days for an -->
+      <!--   assignment), penalty is 25% for each additional late day. -->
+      <!-- </p> -->
+
+      <h2>FAQ</h2>
+      <p><b>Q</b>: Who should I contact for OAE letter and request?</p>
+      <p>
+        <b>A</b>: For OAE letters and requests, please email our head TA
+        <a href="mailto:TBD@stanford.edu">TBD</a>.
+      </p>
+    </div>
+    <div class="sechighlight">
+      <div class="container sec">
+        <h2>Prerequisites</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="classpanel">
+              <a
+                href="http://vision.stanford.edu/teaching/cs131_fall1819/files/python_tutorial.pdf"
+              >
+                <p><img src="img/noun_python_1375869_aa001c.png" /></p>
+                <br />
+                <p><span class="spanh">Proficiency in Python (NumPy)</span></p>
+              </a>
+              <p>
+                All class assignments will be in Python (with numpy.) Please review this NumPy
+                tutorial to help with your assignments.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="classpanel">
+              <p><img src="img/noun_Data Matrix_311905_aa001c.png" /></p>
+              <br />
+              <p>
+                <span class="spanh">Linear Algebra</span> (e.g. MATH 51)<br />
+                <br />
+                We will use matrix transpose, inverse, rotation, translation and other algebraic
+                operations with matrix expressions. If you are a quick learner you should be able to
+                learn them during the class if you haven’t yet. We will have review sessions and
+                provide review materials.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="classpanel">
+              <p><img src="img/noun_maths_1051614_aa001c.png" /></p>
+              <br />
+              <p>
+                <span class="spanh">Calculus</span> (e.g. MATH 19 or 41)<br />
+                <br />
+                You’ll need to be able to take a derivative, and maximize a function by finding
+                where the derivative=0.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="classpanel">
+              <p><img src="img/noun_Probability curve_614252_aa001c.png" /></p>
+              <br />
+              <p>
+                <span class="spanh">Probability and Statistics</span> (e.g. CS 109)<br /><br />
+                You should know basics of probabilities, gaussian distributions, mean, standard
+                deviation, etc.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    <div class="container sec">
+      <h2>Course Calendar</h2>
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=ec56e606fdc5fb4791a1d7c7f05775b95fb6f0c0733d4ca301645974b2e2d5a6%40group.calendar.google.com&ctz=America%2FLos_Angeles"
+        frameborder="0"
+        scrolling="no"
+        style="border: 0; height: 600px; width: 800px; max-width: 90%"
+      ></iframe>
+    </div>
+    -->
+
+    <div class="">
+      <div class="container sec"></div>
+    </div>
+
+    <!-- jQuery and Boostrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

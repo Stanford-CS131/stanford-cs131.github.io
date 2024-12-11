@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assignment Details | CS 131</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"
+    />
+
+    <!-- Google fonts -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto:400,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div id="header" class="row">
+      <div class="col-md-2">
+        <div style="height: 100px; width: 71px; overflow: hidden">
+          <a href="http://svl.stanford.edu/">
+            <img
+              src="img/svl_logo.png"
+              style="height: 100%; width: auto; float: left; margin-left: 20px"
+            />
+          </a>
+        </div>
+      </div>
+      <div id="classname" class="col-md-10">
+        <a href="index.html">
+          <h1 style="color: #aa001c">
+            CS131 Computer Vision: Foundations and Applications
+          </h1>
+        </a>
+        <div style="text-align: right">
+          <h4>Winter 2024</h4>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+    </div>
+
+    <div class="sechighlight">
+      <div class="container sec">
+        <h2>What will the assignments contain?</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="classpanel">
+              <a href="https://github.com/stanfordvl/cs131_release">
+                <p><img src="img/noun_coding_1316502_aa001c.png" /></p>
+                <br />
+                <p>
+                  <span class="spanh">Link to all released assignments</span>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <p>
+              Homework assignments will mainly involve building out prototypes for
+              applications that we will discuss in class. For example, you will
+              learn to create your own instagram-like filters or snapchat-like
+              masks or smart-car lane detectors.
+            </p>
+            <p>
+              Each assignment will contain a
+              <i>hw*.ipynb</i>
+              ipython notebook file that will guide you through the homework.
+              This file will ask you to code up functions in other
+              <i>*.py</i>
+              files and may even ask you to fill in short answers or equations
+              in the ipython notebook. All the instructions necessary for the
+              homework are contained in these
+              <i>hw*.ipynb</i>
+              files.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container sec">
+      <h2>How to submit your assignments?</h2>
+      <p>
+        After you have completed each assignment, you need to submit the
+        following deliverables:
+      </p>
+      <ul>
+        <li>
+          <i>hw*.pdf</i>
+          - Export the hw*.ipynb ipython notebook as a PDF and submit it to the
+          Gradescope site under the assignment called
+          <b>Homework * PDF</b>
+          . In order to export notebook as a PDF, you will need to
+          <a
+            href="https://nbconvert.readthedocs.io/en/latest/install.html#installing-nbconvert"
+          >
+            install additional libraries
+          </a>
+          .
+        </li>
+        <li>
+          <i>hw*.ipynb, *.py</i>
+          - All the python files we ask you to code up must be submitted to
+          Gradescope as well under the assignment called
+          <b>Homework * Code</b>
+          .
+        </li>
+        <li>
+          If you experience errors with the Gradescope site and are about to
+          miss the deadline for submitting the assignment, then attach your
+          completed assignment to a private Ed post with the subject
+          <b>[CS131-HW* submission]</b> so that we have a record of your work.
+        </li>
+      </ul>
+    </div>
+
+    <div class="container sec">
+      <h2>How to start working on an assignment?</h2>
+      <p>Before working on each homework, you need to setup a few things:</p>
+
+      <p>
+        <b>Installing Python 3.6+:</b>
+        To use python3, make sure to install
+        <b>version 3.6+</b>
+        on your local machine. If you are on Mac OS X, you can do this using
+        <a href="https://brew.sh/">Homebrew</a>
+        with
+        <code>
+          brew install
+          https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
+        </code>
+        . You can find instructions for Ubuntu
+        <a
+          href="https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-ubuntu-16-04"
+        >
+          here
+        </a>
+        .
+      </p>
+      <br />
+
+      <p>
+        <b>Setting up a virtual environment:</b>
+        we strongly recommend working using a single
+        <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">
+          virtual environment
+        </a>
+        for all homeworks. This will allow you to have a working environment
+        with all the package dependencies within the repository of your
+        homework, without messing up your work environment in other
+        repositories.
+      </p>
+      <p>
+        All necessary dependencies for your CS131 homeworks can be found in a
+        single
+        <a
+          href="https://github.com/StanfordVL/CS131_release/blob/master/requirements.txt"
+        >
+          requirements.txt
+        </a>
+        file, which has been placed at the root of the homework release
+        repository.
+      </p>
+      <p>
+        To set up a virtual environment with name
+        <code>.env</code>
+        , run the following inside your homework directory (ex: inside
+        <code>cs131/</code>
+        ):
+      </p>
+      <pre>
+sudo pip install virtualenv        # You will need to do this only once
+virtualenv -p python3 .env         # Creates a virtual environment with python3
+source .env/bin/activate           # Activate the virtual environment
+pip install -r requirements.txt    # Install all the dependencies
+# Work on the assignement for a while...
+deactivate                         # Exit the virtual environment when you're done</pre
+      >
+
+      <p>
+        Note that every time you want to work on the assignment, you should run
+        <code>source .env/bin/activate</code>
+        (from within your assignment folder) to re-activate the virtual
+        environment, and
+        <code>deactivate</code>
+        again whenever you are done.
+      </p>
+      <br />
+      <p>
+        <b>
+          Working with
+          <a href="https://jupyter.org/">Jupyter notebooks</a>
+          :
+        </b>
+        in your assignment repository, start the notebook with the
+        <code>jupyter notebook</code>
+        command. You might have issues if you are in a virtual environment, as
+        the notebook might not recognize your virtual environment and might not
+        find the kernel located in
+        <code>.env</code>
+        to execute code. In this case, refer to
+        <a
+          href="https://help.pythonanywhere.com/pages/IPythonNotebookVirtualenvs/"
+        >
+          this page
+        </a>
+        and do the following within your virtual environment:
+      </p>
+      <pre>python -m ipykernel install --user --name=my-virtualenv-name</pre>
+      <p>
+        If you are unfamiliar with Jupyter notebooks, you can also refer this
+        <a href="http://cs231n.github.io/ipython-tutorial">IPython tutorial</a>
+        .
+      </p>
+      <p>
+        When working with a Jupyter notebook, you can edit the
+        <code>*.py</code>
+        files either in the Jupyter interface (in your browser) or with your
+        favorite editor (vim, Atom...). Whenever you save a
+        <code>*.py</code>
+        file, the notebook will reload their content directly.
+      </p>
+    </div>
+
+    <div class="sechighlight">
+      <div class="container sec">
+        <h2>How do you download the assignments?</h2>
+        <p>
+          All the assignments will be released via github. You can download the
+          files directly from the website. But instead, we recommend, you use
+          <b>git</b>
+          to download the assignments because this will make it easy for you to
+          update the assignments in case there is an update. The instructions
+          below describe how to use git to download our assignments.
+        </p>
+        <h4>1. Installing Git</h4>
+        <p>Follow the instructions here:</p>
+        <pre>https://git-scm.com/book/en/v1/Getting-Started-Installing-Git</pre>
+
+        <h4>
+          2. Downloading the assignments and lecture notes to your local
+          machine.
+        </h4>
+        <p>
+          In terminal, run the following to copy the released homework directory
+          to your desktop.
+        </p>
+        <pre>git clone https://github.com/StanfordVL/CS131_release.git</pre>
+        <p>Run the following to copy the lecture notes directory.</p>
+        <pre>git clone https://github.com/StanfordVL/CS131_notes</pre>
+
+        <h4>
+          3. In case there are updates to the assignments, update your local
+          code using this.
+        </h4>
+        To update your local repository to the newest commit, execute
+        <pre>git pull</pre>
+        <p>
+          This will fetch the changes that TAs made in the remote directory, so
+          your local directory will be up-to-date with the remote one. Be
+          careful that sometimes if the TAs and you are changing the same lines,
+          there will be a conflict, and you may have to fix the conflicts
+          mannually.
+        </p>
+        <p>
+          In case you did something wrong and want to give up local changes,
+          which hopefully never happens ;), execute
+        </p>
+        <pre>git checkout -- &lt;filename&gt;</pre>
+        <!--
+        <h4>4. (For class notes only) Commit Your Changes</h4>
+        <p>
+          Ignore this step for submitting assignments. This section describes
+          how you should submit class notes.
+        </p>
+        <p>
+          Before submitting your lecture notes, you will only need to commit
+          your lecture notes to the lecture notes directory.
+        </p>
+        <p>
+          4.1 Create your own branch by running the following, where for
+          example, branchname could be "lecture1", and then switch to the new
+          branch.
+        </p>
+        <pre>
+git branch lecture1
+git checkout lecture1</pre
+        >
+        <p>
+          4.2 Add your local changed files, commit the changes and push to your
+          branch by running the followings.
+        </p>
+        <pre>
+git add &lt;filename&gt;
+git commit -m "your commit message"
+git push</pre
+        >
+        <p>4.3 Then you need to merge your branch back to master.</p>
+        <pre>git merge master</pre>
+        Now go online to your branch on the
+        <a href="https://github.com/StanfordVL/CS131_notes">
+          class notes repository
+        </a>
+        and click on
+        <b>submit a pull request</b>
+        . We will be able to track your class notes, give you feedback and grade
+        your work using this pull request.
+      --></div>
+    </div>
+
+    <div class="container sec">
+      <h2>Collaboration Policy</h2>
+      <ul>
+        <li>
+          Study groups are allowed but we expect students to understand and
+          complete their own assignments and to hand in one assignment per
+          student.
+        </li>
+        <li>
+          If you worked in a group, please put the names of your study group on
+          your assignment on top.
+        </li>
+        <li>
+          Finally, we expect students to not look at implementations online.
+          Just like all other classes at Stanford, we take the student Honor
+          Code seriously.
+        </li>
+      </ul>
+    </div>
+
+    <!-- jQuery and Boostrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
