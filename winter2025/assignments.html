@@ -44,7 +44,7 @@
           </h1>
         </a>
         <div style="text-align: right">
-          <h4>Winter 2024</h4>
+          <h4>Winter 2025</h4>
         </div>
       </div>
       <div style="clear: both"></div>
@@ -75,14 +75,12 @@
             <p>
               Each assignment will contain a
               <i>hw*.ipynb</i>
-              ipython notebook file that will guide you through the homework.
-              This file will ask you to code up functions in other
-              <i>*.py</i>
-              files and may even ask you to fill in short answers or equations
-              in the ipython notebook. All the instructions necessary for the
+              Google Colab notebook that will guide you through the homework.
+              In addition to filling in code, this file may ask you to fill in short answers or equations
+              within the notebook. All the instructions necessary for the
               homework are contained in these
               <i>hw*.ipynb</i>
-              files.
+              notebooks.
             </p>
           </div>
         </div>
@@ -97,22 +95,21 @@
       </p>
       <ul>
         <li>
-          <i>hw*.pdf</i>
-          - Export the hw*.ipynb ipython notebook as a PDF and submit it to the
+          <b><i>hw*.pdf</i></b>
+          - Export the hw*.ipynb Colab notebook as a PDF and submit it to the
           Gradescope site under the assignment called
           <b>Homework * PDF</b>
-          . In order to export notebook as a PDF, you will need to
+          . In order to export the notebook as a PDF from Colab, use your browser's print function to save the notebook as PDF (double check all pages and images are there in the PDF). Optionally, you can convert to PDF by
           <a
             href="https://nbconvert.readthedocs.io/en/latest/install.html#installing-nbconvert"
           >
-            install additional libraries
+            installing additional libraries.
           </a>
-          .
         </li>
         <li>
-          <i>hw*.ipynb, *.py</i>
-          - All the python files we ask you to code up must be submitted to
-          Gradescope as well under the assignment called
+          <b><i>hw*.ipynb</i></b>
+          - Export hw*.ipynb as a <b>Python file (hw*.py)</b> and submit it to
+          Gradescope under the assignment called
           <b>Homework * Code</b>
           .
         </li>
@@ -127,112 +124,17 @@
 
     <div class="container sec">
       <h2>How to start working on an assignment?</h2>
-      <p>Before working on each homework, you need to setup a few things:</p>
 
-      <p>
-        <b>Installing Python 3.6+:</b>
-        To use python3, make sure to install
-        <b>version 3.6+</b>
-        on your local machine. If you are on Mac OS X, you can do this using
-        <a href="https://brew.sh/">Homebrew</a>
-        with
-        <code>
-          brew install
-          https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
-        </code>
-        . You can find instructions for Ubuntu
-        <a
-          href="https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-ubuntu-16-04"
-        >
-          here
-        </a>
-        .
-      </p>
-      <br />
+      <p><b>Homework assignments will be done in Google Colab notebooks, so no local setup is needed.</b> 
 
-      <p>
-        <b>Setting up a virtual environment:</b>
-        we strongly recommend working using a single
-        <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">
-          virtual environment
-        </a>
-        for all homeworks. This will allow you to have a working environment
-        with all the package dependencies within the repository of your
-        homework, without messing up your work environment in other
-        repositories.
-      </p>
-      <p>
-        All necessary dependencies for your CS131 homeworks can be found in a
-        single
-        <a
-          href="https://github.com/StanfordVL/CS131_release/blob/master/requirements.txt"
-        >
-          requirements.txt
-        </a>
-        file, which has been placed at the root of the homework release
-        repository.
-      </p>
-      <p>
-        To set up a virtual environment with name
-        <code>.env</code>
-        , run the following inside your homework directory (ex: inside
-        <code>cs131/</code>
-        ):
-      </p>
-      <pre>
-sudo pip install virtualenv        # You will need to do this only once
-virtualenv -p python3 .env         # Creates a virtual environment with python3
-source .env/bin/activate           # Activate the virtual environment
-pip install -r requirements.txt    # Install all the dependencies
-# Work on the assignement for a while...
-deactivate                         # Exit the virtual environment when you're done</pre
+      Optional: if you don't want to use Colab, we recommend using 
+      <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html"
       >
+        conda
+      </a>
+      for any local installations.
 
-      <p>
-        Note that every time you want to work on the assignment, you should run
-        <code>source .env/bin/activate</code>
-        (from within your assignment folder) to re-activate the virtual
-        environment, and
-        <code>deactivate</code>
-        again whenever you are done.
-      </p>
-      <br />
-      <p>
-        <b>
-          Working with
-          <a href="https://jupyter.org/">Jupyter notebooks</a>
-          :
-        </b>
-        in your assignment repository, start the notebook with the
-        <code>jupyter notebook</code>
-        command. You might have issues if you are in a virtual environment, as
-        the notebook might not recognize your virtual environment and might not
-        find the kernel located in
-        <code>.env</code>
-        to execute code. In this case, refer to
-        <a
-          href="https://help.pythonanywhere.com/pages/IPythonNotebookVirtualenvs/"
-        >
-          this page
-        </a>
-        and do the following within your virtual environment:
-      </p>
-      <pre>python -m ipykernel install --user --name=my-virtualenv-name</pre>
-      <p>
-        If you are unfamiliar with Jupyter notebooks, you can also refer this
-        <a href="http://cs231n.github.io/ipython-tutorial">IPython tutorial</a>
-        .
-      </p>
-      <p>
-        When working with a Jupyter notebook, you can edit the
-        <code>*.py</code>
-        files either in the Jupyter interface (in your browser) or with your
-        favorite editor (vim, Atom...). Whenever you save a
-        <code>*.py</code>
-        file, the notebook will reload their content directly.
-      </p>
-    </div>
-
+    
     <div class="sechighlight">
       <div class="container sec">
         <h2>How do you download the assignments?</h2>
@@ -247,37 +149,43 @@ deactivate                         # Exit the virtual environment when you're do
         <h4>1. Installing Git</h4>
         <p>Follow the instructions here:</p>
         <pre>https://git-scm.com/book/en/v1/Getting-Started-Installing-Git</pre>
-
         <h4>
-          2. Downloading the assignments and lecture notes to your local
-          machine.
+          2. Forking the released homework repository
+        </h4>
+          <p>Navigate to the 
+            <a href="https://github.com/stanfordvl/cs131_release"
+            > 
+              repo 
+            </a> 
+            and then click the "Fork" button on the top right corner of the page.</p>
+        <h4>
+          3. Cloning your fork to your local
+          machine
         </h4>
         <p>
-          In terminal, run the following to copy the released homework directory
+          In terminal, run the following to copy your fork of the released homework directory
           to your desktop.
         </p>
-        <pre>git clone https://github.com/StanfordVL/CS131_release.git</pre>
-        <p>Run the following to copy the lecture notes directory.</p>
-        <pre>git clone https://github.com/StanfordVL/CS131_notes</pre>
-
+        <pre>git clone https://github.com/[your_username]/CS131_release.git</pre>
+        Then, run the following to add the original repo as a remote.
+        <pre>git remote add upstream https://github.com/StanfordVL/CS131_release.git</pre>
         <h4>
-          3. In case there are updates to the assignments, update your local
-          code using this.
+          4. Updating your local fork
         </h4>
-        To update your local repository to the newest commit, execute
-        <pre>git pull</pre>
+        To update your local fork to the newest commit, execute
+        <pre>git fetch upstream</pre>
         <p>
           This will fetch the changes that TAs made in the remote directory, so
           your local directory will be up-to-date with the remote one. Be
           careful that sometimes if the TAs and you are changing the same lines,
           there will be a conflict, and you may have to fix the conflicts
-          mannually.
+          manually.
         </p>
-        <p>
+<!--         <p>
           In case you did something wrong and want to give up local changes,
           which hopefully never happens ;), execute
         </p>
-        <pre>git checkout -- &lt;filename&gt;</pre>
+        <pre>git checkout -- &lt;filename&gt;</pre> -->
         <!--
         <h4>4. (For class notes only) Commit Your Changes</h4>
         <p>
@@ -322,20 +230,22 @@ git push</pre
     <div class="container sec">
       <h2>Collaboration Policy</h2>
       <ul>
-        <li>
-          Study groups are allowed but we expect students to understand and
-          complete their own assignments and to hand in one assignment per
-          student.
-        </li>
-        <li>
-          If you worked in a group, please put the names of your study group on
-          your assignment on top.
-        </li>
-        <li>
-          Finally, we expect students to not look at implementations online.
-          Just like all other classes at Stanford, we take the student Honor
-          Code seriously.
-        </li>
+          <li><strong>Homework:</strong> individual efforts</li>
+          <li><strong>Final Project:</strong> can work alone or in teams of 2 or 3
+            <ul>
+              <li>explicitly state individual contributions on finals / demo / report</li>
+              <li>recommend teams: more fun, and we expect a more ambitious project</li>
+            </ul>
+          </li>
+          <li><strong>ChatGPT/Cursor/etc:</strong> allowed for final project but...
+            <ul>
+              <li>try to not use for homework: we want you to learn and get it!</li>
+              <li>explicitly state use for the project (treat like collaborators): higher expectations!</li>
+              <li>using turn-key / no-code tools (e.g., roboflow) is against the purpose of this class</li>
+            </ul>
+          </li>
+          <li><strong>Always follow the <a href="https://communitystandards.stanford.edu/policies-guidance/honor-code">Stanford Honor Code</a>:</strong> turning in something late or incomplete is better than violating the honor code</li>
+          <li><strong>We are here to help you:</strong> talk to us!</li>
       </ul>
     </div>
 
