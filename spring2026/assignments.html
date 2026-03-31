@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assignment Details | CS 131</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"
+    />
+
+    <!-- Google fonts -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto:400,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div id="header" class="row">
+      <div class="col-md-2">
+        <div style="height: 100px; width: 71px; overflow: hidden">
+          <a href="http://svl.stanford.edu/">
+            <img
+              src="img/svl_logo.png"
+              style="height: 100%; width: auto; float: left; margin-left: 20px"
+            />
+          </a>
+        </div>
+      </div>
+      <div id="classname" class="col-md-10">
+        <a href="index.html">
+          <h1 style="color: #aa001c">
+            CS131 Computer Vision: Foundations and Applications
+          </h1>
+        </a>
+        <div style="text-align: right">
+          <h4>Spring 2026</h4>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+    </div>
+
+    <div class="sechighlight">
+      <div class="container sec">
+        <h2>What will the assignments contain?</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="classpanel">
+              <a href="">
+                <p><img src="img/noun_coding_1316502_aa001c.png" /></p>
+                <br />
+                <p>
+                  <span class="spanh">Released Assignments TBD</span>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <p>
+              Homework assignments will mainly involve building out prototypes for
+              applications that we will discuss in class. For example, you will
+              learn to create your own instagram-like filters or snapchat-like
+              masks or smart-car lane detectors.
+            </p>
+            <p>
+              Each assignment will contain a
+              <i>hw*.ipynb</i>
+              Google Colab notebook that will guide you through the homework.
+              In addition to filling in code, this file may ask you to fill in short answers or equations
+              within the notebook. All the instructions necessary for the
+              homework are contained in these
+              <i>hw*.ipynb</i>
+              notebooks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container sec">
+      <h2>How to submit your assignments?</h2>
+      <p>
+        After you have completed each assignment, you need to submit the
+        following deliverables:
+      </p>
+      <ul>
+        <li>
+          <b><i>hw*.pdf</i></b>
+          - Export the hw*.ipynb Colab notebook as a PDF and submit it to the
+          Gradescope site under the assignment called
+          <b>Homework * PDF</b>
+          . In order to export the notebook as a PDF from Colab, use your browser's print function to save the notebook as PDF (double check all pages and images are there in the PDF). Optionally, you can convert to PDF by
+          <a
+            href="https://nbconvert.readthedocs.io/en/latest/install.html#installing-nbconvert"
+          >
+            installing additional libraries.
+          </a>
+        </li>
+        <li>
+          <b><i>hw*.py</i></b>
+          - Export hw*.ipynb as a <b>Python file (hw*.py)</b> and submit it to
+          Gradescope under the assignment called
+          <b>Homework * Code</b>
+          .
+        </li>
+        <li>
+          If you experience errors with the Gradescope site and are about to
+          miss the deadline for submitting the assignment, then attach your
+          completed assignment to a private Ed post with the subject
+          <b>[CS131-HW* submission]</b> so that we have a record of your work.
+        </li>
+      </ul>
+    </div>
+
+    <div class="container sec">
+      <h2>How to start working on an assignment?</h2>
+
+      <p><b>Homework assignments will be done in Google Colab notebooks, so no local setup is needed.</b> 
+
+      Optional: if you don't want to use Colab, we recommend using 
+      <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html"
+      >
+        conda
+      </a>
+      for any local installations.
+
+    
+    <div class="sechighlight">
+      <div class="container sec">
+        <h2>How do you download the assignments?</h2>
+        <p>
+          All the assignments will be released via github. You can download the
+          files directly from the website. But instead, we recommend, you use
+          <b>git</b>
+          to download the assignments because this will make it easy for you to
+          update the assignments in case there is an update. The instructions
+          below describe how to use git to download our assignments.
+        </p>
+        <h4>1. Installing Git</h4>
+        <p>Follow the instructions here:</p>
+        <pre>https://git-scm.com/book/en/v1/Getting-Started-Installing-Git</pre>
+        <h4>
+          2. Forking the released homework repository
+        </h4>
+          <p>Navigate to the 
+            <a href="https://github.com/stanfordvl/cs131_release"
+            > 
+              repo 
+            </a> 
+            and then click the "Fork" button on the top right corner of the page.</p>
+        <h4>
+          3. Cloning your fork to your local
+          machine
+        </h4>
+        <p>
+          In terminal, run the following to copy your fork of the released homework directory
+          to your desktop.
+        </p>
+        <pre>git clone https://github.com/[your_username]/CS131_release.git</pre>
+        Then, run the following to add the original repo as a remote.
+        <pre>git remote add upstream https://github.com/StanfordVL/CS131_release.git</pre>
+        <h4>
+          4. Updating your local fork
+        </h4>
+        To update your local fork to the newest commit, execute
+        <pre>git fetch upstream</pre>
+        <p>
+          This will fetch the changes that TAs made in the remote directory, so
+          your local directory will be up-to-date with the remote one. Be
+          careful that sometimes if the TAs and you are changing the same lines,
+          there will be a conflict, and you may have to fix the conflicts
+          manually.
+        </p>
+<!--         <p>
+          In case you did something wrong and want to give up local changes,
+          which hopefully never happens ;), execute
+        </p>
+        <pre>git checkout -- &lt;filename&gt;</pre> -->
+        <!--
+        <h4>4. (For class notes only) Commit Your Changes</h4>
+        <p>
+          Ignore this step for submitting assignments. This section describes
+          how you should submit class notes.
+        </p>
+        <p>
+          Before submitting your lecture notes, you will only need to commit
+          your lecture notes to the lecture notes directory.
+        </p>
+        <p>
+          4.1 Create your own branch by running the following, where for
+          example, branchname could be "lecture1", and then switch to the new
+          branch.
+        </p>
+        <pre>
+git branch lecture1
+git checkout lecture1</pre
+        >
+        <p>
+          4.2 Add your local changed files, commit the changes and push to your
+          branch by running the followings.
+        </p>
+        <pre>
+git add &lt;filename&gt;
+git commit -m "your commit message"
+git push</pre
+        >
+        <p>4.3 Then you need to merge your branch back to master.</p>
+        <pre>git merge master</pre>
+        Now go online to your branch on the
+        <a href="https://github.com/StanfordVL/CS131_notes">
+          class notes repository
+        </a>
+        and click on
+        <b>submit a pull request</b>
+        . We will be able to track your class notes, give you feedback and grade
+        your work using this pull request.
+      --></div>
+    </div>
+
+    <div class="container sec">
+      <h2>Collaboration Policy</h2>
+      <ul>
+          <li><strong>Homework:</strong> individual efforts</li>
+          <li><strong>Final Project:</strong> can work alone or in teams of 2 or 3
+            <ul>
+              <li>explicitly state individual contributions on finals / demo / report</li>
+              <li>recommend teams: more fun, and we expect a more ambitious project</li>
+            </ul>
+          </li>
+          <li><strong>ChatGPT/Cursor/etc:</strong> allowed for final project but...
+            <ul>
+              <li>try to not use for homework: we want you to learn and get it!</li>
+              <li>explicitly state use for the project (treat like collaborators): higher expectations!</li>
+              <li>using turn-key / no-code tools (e.g., roboflow) is against the purpose of this class</li>
+            </ul>
+          </li>
+          <li><strong>Always follow the <a href="https://communitystandards.stanford.edu/policies-guidance/honor-code">Stanford Honor Code</a>:</strong> turning in something late or incomplete is better than violating the honor code</li>
+          <li><strong>We are here to help you:</strong> talk to us!</li>
+      </ul>
+    </div>
+
+    <!-- jQuery and Boostrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
